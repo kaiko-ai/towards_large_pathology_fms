@@ -1,6 +1,6 @@
 # Towards Large-Scale Training of Pathology Foundation Models
 This repository contains the official implementation of the research paper: _"Towards Large-Scale Training of Pathology Foundation Models"_<br>
-[[`whitepaper`](./towards_large_scale_training_of_pathology_foundation_models.pdf)]
+[[`whitepaper`](https://github.com/kaiko-ai/towards_large_pathology_fms/blob/main/towards_large_scale_training_of_pathology_foundation_models.pdf?raw=true)]
 
 ## Pretrained models
 
