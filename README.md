@@ -21,7 +21,6 @@ _Table I: Linear probing evaluation of FMs on patch-level downstream datasets re
 ### Pre-trained backbones (via PyTorch Hub)
 To be released.
 
-
 ## Citation
 
 If you find this repository helpful in your research, please consider citing our paper:
