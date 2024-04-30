@@ -20,3 +20,18 @@ _Table I: Linear probing evaluation of FMs on patch-level downstream datasets re
 
 ### Pre-trained backbones (via PyTorch Hub)
 To be released.
+
+
+## Citation
+
+If you find this repository helpful in your research, please consider citing our paper:
+```
+@misc{ai2024largescale,
+    title={Towards Large-Scale Training of Pathology Foundation Models}, 
+    author={kaiko. ai and Nanne Aben and Edwin D. de Jong and Ioannis Gatopoulos and Nicolas Känzig and Mikhail Karasikov and Axel Lagré and Roman Moser and Joost van Doorn and Fei Tang},
+    year={2024},
+    eprint={2404.15217},
+    archivePrefix={arXiv},
+    primaryClass={cs.CV}
+}
+```
