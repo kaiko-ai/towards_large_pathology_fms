@@ -27,7 +27,7 @@ If you find this repository helpful in your research, please consider citing our
 ```
 @misc{ai2024largescale,
     title={Towards Large-Scale Training of Pathology Foundation Models}, 
-    author={kaiko. ai and Nanne Aben and Edwin D. de Jong and Ioannis Gatopoulos and Nicolas Känzig and Mikhail Karasikov and Axel Lagré and Roman Moser and Joost van Doorn and Fei Tang},
+    author={kaiko.ai and Nanne Aben and Edwin D. de Jong and Ioannis Gatopoulos and Nicolas Känzig and Mikhail Karasikov and Axel Lagré and Roman Moser and Joost van Doorn and Fei Tang},
     year={2024},
     eprint={2404.15217},
     archivePrefix={arXiv},
