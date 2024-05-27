@@ -22,7 +22,7 @@ _Table I: Linear probing evaluation of FMs on patch-level downstream datasets re
 
 Use the code below to get started with the models:
 ```py
-# pip install torch timm
+# pip install timm
 import torch
 
 vits16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16", trust_repo=True)
@@ -34,6 +34,7 @@ vitl14 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitl14", trust_
 
 Here is an end-to-end example:
 ```py
+# pip install timm
 import io
 
 import requests
