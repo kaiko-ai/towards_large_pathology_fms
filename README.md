@@ -82,3 +82,9 @@ If you find this repository helpful in your research, please consider citing our
     primaryClass={cs.CV}
 }
 ```
+
+<br />
+
+<div align="center">
+  <img src="https://github.com/kaiko-ai/eva/blob/main/docs/images/kaiko-logo.png?raw=true" width="200">
+</div>
