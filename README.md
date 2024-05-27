@@ -19,7 +19,54 @@ _Table I: Linear probing evaluation of FMs on patch-level downstream datasets re
 </div>
 
 ### Pre-trained backbones (via PyTorch Hub)
-To be released.
+
+Use the code below to get started with the models:
+```py
+# pip install torch timm
+import torch
+
+vits16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16")
+vits8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits8")
+vitb16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb16")
+vitb8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb8")
+vitl14 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitl14")
+```
+
+Here is an end-to-end example:
+```py
+import io
+
+import requests
+import torch
+from PIL import Image
+from torchvision.transforms import v2
+
+IMAGE_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc7_xZpGOfQT7sxKwf2w5lL4GAq6IX_CbTzP1NGeenzA&s"
+"""A sample WSI patch."""
+
+preprocessing = v2.Compose(
+    [
+        v2.ToImage(),
+        v2.Resize(size=224),
+        v2.CenterCrop(size=224),
+        v2.ToDtype(torch.float32, scale=True),
+        v2.Normalize(
+            mean=(0.5, 0.5, 0.5),
+            std=(0.5, 0.5, 0.5),
+        ),
+    ]
+)
+"""Model pre-processing."""
+
+model = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16")
+"""Vision FM model."""
+
+
+image = Image.open(io.BytesIO(requests.get(IMAGE_URL).content))
+image_tensor = preprocessing(image)
+features = model(image_tensor.unsqueeze(0))
+assert features.shape == torch.Size([1, 384])
+```
 
 ## Citation
 
