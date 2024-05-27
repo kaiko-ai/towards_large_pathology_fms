@@ -13,18 +13,21 @@ RELEASE_TAG = "0.0.1"
 """The release tag to fetch the weights from."""
 
 
-def vits16(*, pretrained: bool = True) -> nn.Module:
+def vits16(*, pretrained: bool = True, dynamic_img_size: bool = True) -> nn.Module:
     """Initializes the vision transformer ViTS-16 pathology FM by kaiko.ai.
 
     Args:
         pretrained: Whether to load the pretrained model weights.
+        dynamic_img_size: Whether to allow the interpolation embedding
+            to be interpolated at `forward()` time when image grid changes
+            from original.
 
     Returns:
         The torch ViTS-16 based foundation model.
     """
     model = timm.create_model(
         model_name="vit_small_patch16_224",
-        dynamic_img_size=True,
+        dynamic_img_size=dynamic_img_size,
         num_classes=0,
         pretrained=False,
     )
@@ -38,18 +41,21 @@ def vits16(*, pretrained: bool = True) -> nn.Module:
     return model
 
 
-def vits8(*, pretrained: bool = True) -> nn.Module:
+def vits8(*, pretrained: bool = True, dynamic_img_size: bool = True) -> nn.Module:
     """Initializes the vision transformer ViTS-8 pathology FM by kaiko.ai.
 
     Args:
         pretrained: Whether to load the pretrained model weights.
+        dynamic_img_size: Whether to allow the interpolation embedding
+            to be interpolated at `forward()` time when image grid changes
+            from original.
 
     Returns:
         The torch ViTS-8 based foundation model.
     """
     model = timm.create_model(
         model_name="vit_small_patch8_224",
-        dynamic_img_size=True,
+        dynamic_img_size=dynamic_img_size,
         num_classes=0,
         pretrained=False,
     )
@@ -63,18 +69,21 @@ def vits8(*, pretrained: bool = True) -> nn.Module:
     return model
 
 
-def vitb16(*, pretrained: bool = True) -> nn.Module:
+def vitb16(*, pretrained: bool = True, dynamic_img_size: bool = True) -> nn.Module:
     """Initializes the vision transformer ViTB-16 pathology FM by kaiko.ai.
 
     Args:
         pretrained: Whether to load the pretrained model weights.
+        dynamic_img_size: Whether to allow the interpolation embedding
+            to be interpolated at `forward()` time when image grid changes
+            from original.
 
     Returns:
         The torch ViTB-16 based foundation model.
     """
     model = timm.create_model(
         model_name="vit_base_patch16_224",
-        dynamic_img_size=True,
+        dynamic_img_size=dynamic_img_size,
         num_classes=0,
         pretrained=False,
     )
@@ -88,18 +97,21 @@ def vitb16(*, pretrained: bool = True) -> nn.Module:
     return model
 
 
-def vitb8(*, pretrained: bool = True) -> nn.Module:
+def vitb8(*, pretrained: bool = True, dynamic_img_size: bool = True) -> nn.Module:
     """Initializes the vision transformer ViTB-8 pathology FM by kaiko.ai.
 
     Args:
         pretrained: Whether to load the pretrained model weights.
+        dynamic_img_size: Whether to allow the interpolation embedding
+            to be interpolated at `forward()` time when image grid changes
+            from original.
 
     Returns:
         The torch ViTB-8 based foundation model.
     """
     model = timm.create_model(
         model_name="vit_base_patch8_224",
-        dynamic_img_size=True,
+        dynamic_img_size=dynamic_img_size,
         num_classes=0,
         pretrained=False,
     )
@@ -113,17 +125,21 @@ def vitb8(*, pretrained: bool = True) -> nn.Module:
     return model
 
 
-def vitl14(*, pretrained: bool = True) -> nn.Module:
+def vitl14(*, pretrained: bool = True, dynamic_img_size: bool = True) -> nn.Module:
     """Initializes the vision transformer ViTL-14 pathology FM by kaiko.ai.
 
     Args:
         pretrained: Whether to load the pretrained model weights.
+        dynamic_img_size: Whether to allow the interpolation embedding
+            to be interpolated at `forward()` time when image grid changes
+            from original.
 
     Returns:
         The torch ViTL-14 based foundation model.
     """
     model = timm.create_model(
         model_name="vit_large_patch14_reg4_dinov2",
+        dynamic_img_size=dynamic_img_size,
         pretrained=False,
     )
     if pretrained:

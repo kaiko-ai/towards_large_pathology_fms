@@ -57,10 +57,10 @@ preprocessing = v2.Compose(
         ),
     ]
 )
-"""Model pre-processing."""
+"""Initialize model pre-process transforms."""
 
 model = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16")
-"""Vision FM model."""
+"""Initialize vision FM model."""
 
 
 image = Image.open(io.BytesIO(requests.get(IMAGE_URL).content))
