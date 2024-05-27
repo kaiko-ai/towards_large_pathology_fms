@@ -25,11 +25,11 @@ Use the code below to get started with the models:
 # pip install torch timm
 import torch
 
-vits16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16")
-vits8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits8")
-vitb16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb16")
-vitb8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb8")
-vitl14 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitl14")
+vits16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16", trust_repo=True)
+vits8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits8", trust_repo=True)
+vitb16 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb16", trust_repo=True)
+vitb8 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitb8", trust_repo=True)
+vitl14 = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vitl14", trust_repo=True)
 ```
 
 Here is an end-to-end example:
