@@ -71,8 +71,8 @@ assert features.shape == torch.Size([1, 384])
 
 ## Citation
 
-If you find this repository helpful in your research, please consider citing our paper:
-```
+If you find this repository useful, please consider giving a star ⭐ and adding the following citation:
+```bibtex
 @misc{ai2024largescale,
     title={Towards Large-Scale Training of Pathology Foundation Models}, 
     author={kaiko.ai and Nanne Aben and Edwin D. de Jong and Ioannis Gatopoulos and Nicolas Känzig and Mikhail Karasikov and Axel Lagré and Roman Moser and Joost van Doorn and Fei Tang},
