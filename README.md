@@ -46,6 +46,7 @@ from torchvision.transforms import v2
 IMAGE_URL = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQc7_xZpGOfQT7sxKwf2w5lL4GAq6IX_CbTzP1NGeenzA&s"
 """A sample WSI patch."""
 
+# initialize model pre-process transforms.
 preprocessing = v2.Compose(
     [
         v2.ToImage(),
@@ -58,12 +59,12 @@ preprocessing = v2.Compose(
         ),
     ]
 )
-"""Initialize model pre-process transforms."""
 
-model = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16")
-"""Initialize vision FM model."""
+# initialize vision FM model.
+model = torch.hub.load("kaiko-ai/towards_large_pathology_fms", "vits16", trust_repo=True)
+model.eval()
 
-
+# perform model forward pass and get the feature embeddings
 image = Image.open(io.BytesIO(requests.get(IMAGE_URL).content))
 image_tensor = preprocessing(image)
 features = model(image_tensor.unsqueeze(0))
