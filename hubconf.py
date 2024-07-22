@@ -1,5 +1,7 @@
 """Pathology FM model hub from kaiko.ai."""
 
+from typing import List
+
 import timm
 import torch
 from torch import nn
