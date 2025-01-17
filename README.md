@@ -1,5 +1,6 @@
 # Towards Large-Scale Training of Pathology Foundation Models
 [![Paper](http://img.shields.io/badge/paper-arxiv.2404.15217-B31B1B.svg)](https://arxiv.org/abs/2404.15217)
+![Downloads](https://img.shields.io/github/downloads/kaiko-ai/towards_large_pathology_fms/latest/total)
 
 This repository contains the official implementation of the research paper: _"Towards Large-Scale Training of Pathology Foundation Models"_<br>
 
